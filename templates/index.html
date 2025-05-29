@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https:fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+    <title>Heart Disease Detection</title>
+
+<!--
+
+Breezed Template
+
+https://templatemo.com/tm-543-breezed
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/templatemo-breezed.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/lightbox.css' %}">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            HEART DISEASE DETECTION
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            
+                            
+                            <li class="scroll-to-section"><a href="#contact-us">Predict</a></li>
+                            {% comment %} <li class="scroll-to-section"><a href="#Poll">Poll</a></li> {% endcomment %}
+                          
+                            <!--div class="search-icon">
+                                <a href="#search"><i class="fa fa-search"></i></a>
+                            </div-->
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+          <!-- Item -->
+          <div class="item">
+            <div class="img-fill">
+                <img src="{% static '/images/slide-04.jpeg' %}" alt="">
+            <div class="text-content">
+                 
+                  
+                  
+                 
+                </div>
+            </div>
+          </div>
+         
+          
+          
+        </div>
+    </div>
+    
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6><b>About</b></h6>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{% static '/images/service-item-01.png' %}" alt="">
+                                    <h4>Overview</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{% static '/images/service-item-01.png' %}" alt="">
+                                    <a href="{%url 'details'%}"><h4>Symptoms</h4></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{% static '/images/service-item-01.png' %}" alt="">
+                                    <a href="{%url 'risk'%}"><h4>Risk</h4></a>
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-text-content">
+                        
+                       
+                    <br><br><b> What is heart disease?</b>
+                    <br><br>The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack. </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    
+
+    
+                   
+
+      
+                                     
+                                
+    
+    <!-- ***** Prediction Area Starts ***** -->
+    
+    <section class="section" id="contact-us">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                  <div class="left-text-content">
+                      <div class="section-heading">
+                         
+                      </div>
+                      
+                  </div>
+              </div>
+              <div class="col-lg-8 col-md-8 col-xs-12">
+                  <div class="contact-form">
+                    <form id="contact" action="{% url 'results' %}" method="POST">
+                       {% csrf_token %}
+                      <div class="row">
+                          <div class="col-md-6 col-sm-12">
+                            
+                            <fieldset>
+                              Age:
+                             <input name="age" type="text" id="age"  required="" placeholder="">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                             
+                             Gender: <input name="gender" type="text" id="gender"  required="" placeholder="range(M-0,F-1)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                             Chest Pain:
+                              <input name="cp" type="text" id="cp"  required="" placeholder="range(0-3)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Resting Blood Pressure:<input name="rbp" type="text" id="rbp"  required="" placeholder="range(94,180)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                             Cholesterol Level:<input name="cl" type="text" id="chl"  required="" placeholder="range(131,369)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Fasting Blood Sugar Level:<input name="fb" type="text" id="fb"  required="" placeholder="range(0,1)">
+                            </fieldset>
+                          </div>
+                         
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Resting ECG:<input name="ecg" type="text" id="re"  required="" placeholder="range(0,2)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                             Maximum Heart Rate:<input name="mhr" type="text" id="hr"  required="" placeholder="range(71,190)">
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Exercise :<input name="ex" type="text" id="exer"  required="" placeholder="range(0,1)">
+    
+                            </fieldset>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Oldpeak:<input name="olp" type="text" id="olp"  required="" placeholder="range(0,6.2)">
+                            </fieldset>
+                          </div>
+                          
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Slope:<input name="sl" type="text" id="slp"  required="" placeholder="range(0,2)">
+                            </fieldset>
+                          </div>
+                          
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              No.of major vessels:<input name="nm" type="text" id="nmv"  required="" placeholder="range(0,3)">
+                            </fieldset>
+                          </div>
+                          
+                          
+                          <div class="col-md-6 col-sm-12">
+                            <fieldset>
+                              Thalium Stress Rest:<input name="ts" type="text" id="ts"  required="" placeholder="range(0,3)">
+                            </fieldset>
+                          </div>
+                          
+                          
+                          
+                         
+                          
+                          <div class="col-lg-12">
+                              <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-block" href="{% url 'results' %}"> Predict</button>
+                              </div>
+                          </div><br>
+                    
+                      </div>
+                    </form>
+                   
+                  </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** prediction Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="{% static '/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static '/js/popper.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static '/js/owl-carousel.js' %}"></script>
+    <script src="{% static '/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static '/js/waypoints.min.js' %}"></script>
+    <script src="{% static '/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static '/js/imgfix.min.js' %}"></script> 
+    <script src="{% static '/js/slick.js' %}"></script> 
+    <script src="{% static '/js/lightbox.js' %}"></script> 
+    <script src="{% static '/js/isotope.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static '/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>prediction Bootstrap Template - Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{%static '/img/favicon.png'%}" rel="icon">
+  <link href="{%static '/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{%static '/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{%static '/vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
+  <link href="{%static '/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{%static '/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{%static '/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{%static '/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="details.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Symptoms<span>.</span></h1>
+        
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+          {% csrf_token %}
+               
+           
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            
+            <p data-aos="fade-up"><br><b> Warning signs and symptoms of heart disease</b>
+              
+              
+              
+            <br>
+            <b>Chest Pain - </b>Chest pain is discomfort or pain that you feel along the front of your body, between (and including) your neck and upper abdomen. There are many causes of chest pain that have nothing to do with your heart.
+            <br>
+            <b>Shortness of Breath - </b>
+              When the heart can't pump blood as well as it should, blood backs up in the veins that go from the lungs to the heart. Fluid leaks into the lungs and causes shortness of breath. This is a symptom of heart failure.
+            <br>
+            <b>Swelling in the Legs, Ankles, or Feet -</b>
+              Swelling (edema) in your lower legs is another sign of a heart problem. When your heart doesn't work as well, blood flow slows and backs up in the veins in your legs. This causes fluid to build up in your tissues.   
+            <br>
+            <b>Poor Blood Supply to Extremities -</b>
+              Narrowing of the blood vessels that bring blood to other parts of the body is not the same as heart disease but it may mean you have a much higher risk for heart attack than you otherwise would. It can occur when cholesterol and other fatty material (plaque) build up on the walls of your arteries.
+            <br>
+            <b>Fast or Uneven Heartbeat (Palpitations) -</b>
+              If your heart can't pump blood as well, it may beat faster to try to keep up. You may feel your heart racing or throbbing. A fast or uneven heartbeat can also be the sign of an arrhythmia. This is a problem with your heart rate or rhythm.
+          </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url('{%static "img/parkinson/parkinson-01.jpg"%}')">
+      </div>
+
+  
+          
+           
+      <div class="carousel-item" style="background-image: url('{%static "img/parkinson/parkinson-02.jpg"%}')"></div>
+      <div class="carousel-item" style="background-image: url('{%static "img/parkinson/parkinson-03.jpg"%}')"></div>
+      
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  
+   
+
+    
+      
+   
+
+          
+             
+   
+                
+           
+                  
+                     
+        
+                
+
+       
+                 
+     
+ 
+              
+            
+
+         
+        
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static '/vendor/aos/aos.js'%}"></script>
+  <script src="{% static '/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static '/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static '/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main.js'%}"></script>
+ 
+</body>
+
+</html>

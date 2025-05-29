@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <style>
+		
+		.button {
+            padding: 5px 70px;
+            font-size: 14px;
+			      
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+       .button:hover {background-color: #3e8e41}
+
+       .button:active {
+           background-color: #3e8e41;
+           box-shadow: 0 5px #666;
+           transform: translateY(4px);
+        }
+		  .button-container {
+          display: flex;
+           
+        }
+      
+	</style>
+</head>
+<body>
+  
+   <form method="post" action="{% url 'export_to_csv' %}">
+    {% csrf_token %}  
+    
+    <button type="submit" class="button" href="{% url 'export_to_csv' %}"> <b>EXPORT</b></button>
+   </form>  
+   <br>
+  <div class="button-container">
+
+    <a href="{% url 'index' %}" ><button class="button"><b>HOME</b></button></a> 
+  </div>
+
+
+    <br><br>
+<table align="center" border="1">
+  <tr>
+    <th>Age</th>
+    <th> Gender</th>
+    <th> Chest Pain</th>
+    <th> Resting Blood Pressure </th>
+    <th>Cholesterol Level</th>
+    <th>Fasting Blood Sugar Level</th>
+    <th>Resting ECG</th>
+    <th>Maximum Heart Rate</th>
+    <th>Exercise </th>
+    <th>Oldpeak</th>
+    <th>Slope</th>
+    <th>No.of major vessels</th>
+    <th>Thalium Stress Rest</th>
+    <th>Result</th>
+
+
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{ i.age}}</td>
+    <td>{{i.gender}}</td>
+    <td>{{i.chp}}</td>
+    <td>{{i.rbp}}</td>
+    <td>{{i.chl}}</td>
+    <td>{{i.fb}}</td>
+    <td>{{i.ecg }}</td>
+    <td>{{i.mhr}}</td>
+    <td>{{i.ex}}</td>
+    <td>{{i.olp }}</td>
+    <td>{{i.sl}}</td>
+    <td>{{i.nm}}</td>
+    <td>{{i.ts}}</td>
+    <td>{{i.result}}</td>
+
+</tr>
+{% endfor %}
+</table>
+</body>    
+</html>
